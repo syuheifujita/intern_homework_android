@@ -24,13 +24,24 @@ class SearchActivity : AppCompatActivity() {
                 .commit()
     }
 
+    private fun showsQiitaListFragment() {
+        val fragmentTransaction = supportFragmentManager.beginTransaction()
+        fragmentTransaction.replace(R.id.search_layout_frame, QiitaListFragment())
+                .addToBackStack(null)
+                .commit()
+    }
+
     private fun setupBottomNavigation() {
         val bottomNavigationView = navigation
         bottomNavigationView.setOnNavigationItemSelectedListener { item: MenuItem ->
             item.isChecked = true
             when (item.itemId) {
-                R.id.nav_list -> {
+                R.id.nab_setting -> {
                     showsSearchFragment()
+                    return@setOnNavigationItemSelectedListener true
+                }
+                R.id.nav_list -> {
+                    showsQiitaListFragment()
                     return@setOnNavigationItemSelectedListener true
                 }
             }
