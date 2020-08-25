@@ -36,7 +36,7 @@ class SearchActivity : AppCompatActivity() {
         bottomNavigationView.setOnNavigationItemSelectedListener { item: MenuItem ->
             item.isChecked = true
             when (item.itemId) {
-                R.id.nav_list -> {
+                R.id.nab_setting -> {
                     showsSearchFragment()
                     return@setOnNavigationItemSelectedListener true
                 }
