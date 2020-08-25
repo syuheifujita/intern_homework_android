@@ -24,6 +24,13 @@ class SearchActivity : AppCompatActivity() {
                 .commit()
     }
 
+    private fun showsQuestion1SearchFragment() {
+        val fragmentTransaction = supportFragmentManager.beginTransaction()
+        fragmentTransaction.replace(R.id.search_layout_frame, Question1SearchFragment())
+                .addToBackStack(null)
+                .commit()
+    }
+
     private fun setupBottomNavigation() {
         val bottomNavigationView = navigation
         bottomNavigationView.setOnNavigationItemSelectedListener { item: MenuItem ->
@@ -31,6 +38,10 @@ class SearchActivity : AppCompatActivity() {
             when (item.itemId) {
                 R.id.nav_list -> {
                     showsSearchFragment()
+                    return@setOnNavigationItemSelectedListener true
+                }
+                R.id.nab_setting -> {
+                    showsQuestion1SearchFragment()
                     return@setOnNavigationItemSelectedListener true
                 }
             }
