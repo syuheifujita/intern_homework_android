@@ -40,7 +40,7 @@ class SearchActivity : AppCompatActivity() {
                     showsSearchFragment()
                     return@setOnNavigationItemSelectedListener true
                 }
-                R.id.nab_setting -> {
+                R.id.nav_list -> {
                     showsQuestion1SearchFragment()
                     return@setOnNavigationItemSelectedListener true
                 }

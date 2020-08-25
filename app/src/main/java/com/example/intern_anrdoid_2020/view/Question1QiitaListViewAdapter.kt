@@ -11,6 +11,10 @@ import com.example.intern_anrdoid_2020.R
 import com.example.intern_anrdoid_2020.model.response.QiitaArticleResponse
 import com.example.intern_anrdoid_2020.view.QiitaListViewAdapter.QiitaListViewHolder
 import kotlinx.android.synthetic.main.row_qiita_list.view.*
+import kotlinx.android.synthetic.main.row_qiita_list.view.iv_user_image
+import kotlinx.android.synthetic.main.row_qiita_list.view.tv_qiita_lgtm_counter
+import kotlinx.android.synthetic.main.row_qiita_list.view.tv_qiita_title
+import kotlinx.android.synthetic.main.row_qiita_list_question1.view.*
 
 class Question1QiitaListViewAdapter(private val listData: List<QiitaArticleResponse>?) : RecyclerView.Adapter<Question1QiitaListViewAdapter.Question1QiitaListViewHolder>() {
 
@@ -30,9 +34,9 @@ class Question1QiitaListViewAdapter(private val listData: List<QiitaArticleRespo
         val tvQiitaLgtm: TextView
 
         init {
-            ivQiitaImage = itemView.iv_user_image
-            tvQiitaTitle = itemView.tv_qiita_title
-            tvQiitaLgtm = itemView.tv_qiita_lgtm_counter
+            ivQiitaImage = itemView.iv_user_image_question1
+            tvQiitaTitle = itemView.tv_qiita_title_question1
+            tvQiitaLgtm = itemView.tv_qiita_lgtm_counter_question1
         }
     }
 
